@@ -16,7 +16,7 @@ function PrivateRoute({ component: Component, isLoggedin, isLoading, ...rest }) 
           
           <Component {...props} /> 
           
-          : <Redirect to="/login" />
+          : <Redirect to="/" />
         }
       />
       
