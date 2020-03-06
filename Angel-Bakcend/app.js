@@ -12,6 +12,7 @@ require('dotenv').config();
 const auth = require('./routes/auth');
 
 const addProject = require("./routes/addproject")
+const listProject = require("./routes/listproject")
 // const coins = require('./routes/coinsRoute');
 // const favorites = require("./routes/favouriteRoute");
 // const ownCoins = require("./routes/ownCoinsRoute");
@@ -72,7 +73,7 @@ app.use(
 
 app.use((req, res, next) => {
   app.locals.currentUser = req.session.currentUser;
-  console.log(app.locals.currentUser);
+  //console.log(app.locals.currentUser);
   next();
 });
 
@@ -87,6 +88,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ROUTER MIDDLEWARE
 app.use('/auth', auth);
 app.use("/addproject", addProject);
+app.use("/listproject", listProject);
+
+
 // If I have localhost:5000/coins --> the route file is coinsRoute.js in route folde
 // app.use("/coins", coins);
 // app.use("/favorites", favorites);
