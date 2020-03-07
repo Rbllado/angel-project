@@ -21,7 +21,6 @@ router.get("/", (req, res, next) => {
       //returning the description of project
       Projects.findById(projectId)
         .then(detailProject => {
-          console.log(detailProject);
           res.status(200).json((detailProject));
         })
         .catch(err => console.log(err))
