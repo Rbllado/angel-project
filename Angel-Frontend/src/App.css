@@ -41,11 +41,7 @@ body {
   justify-content: space-evenly;
 }
 
-.coin-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
+
 .coin-container a {
   text-decoration: none;
 }

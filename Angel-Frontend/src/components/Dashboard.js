@@ -3,44 +3,67 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 class Dashboard extends Component {
-    state = {
-        name: "",
-        idProject: 0,
-        description: "",
-        incidents: 0
-      };
-    
-      getProject = () => {
-        axios
-          .get(`${process.env.REACT_APP_API_URL}/listproject`,{
-            withCredentials: true
-          })
-          .then(response => {
-            //Response for the DB
-            console.log("Lo que me devuelve :" + response.data);  
-            //JSON.stringify
-            
-    
-            // this.setState({
-    
-              
-            // });
-          })
-          .catch(err => console.log(err));
-      };
-    
-      componentDidMount() {
-        this.getProject();
-      }
-    
-      render() {
-        return (
-          <div className="coin-container ">
-    
-    
-                <div className="row list-coins">
-    
-                {/* {this.state.copyListOfCoins.map((project, key) => {
+  state = {
+    name: "",
+    idProject: 0,
+    description: "",
+    incidents: 0,
+    created_at: ""
+  };
+
+  getProject = () => {
+    axios
+      .get(`${process.env.REACT_APP_API_URL}/listproject`, {
+        withCredentials: true
+      })
+      .then(response => {
+        
+        //Response for the DB
+        let project = response.data
+       
+        this.setState({
+
+          name: project.name,
+          idProject: project.idProject,
+          description: project.description,
+          incidents: project.incidents,
+          created_at: project.created_at.slice(0, 10)
+
+        });
+      })
+      .catch(err => console.log(err));
+  };
+
+  componentDidMount() {
+    this.getProject();
+  }
+
+  render() {
+    return (
+      <div className="container">
+
+
+        <div className="">
+
+          <div><h2>Name of the project: {this.state.name}</h2></div>
+          <div><h2> Id project: {this.state.idProject}</h2></div>
+          <div><h3>Description of the project : {this.state.description}</h3></div>
+          <div><h2>Incidents: {this.state.incidents}</h2></div>
+          <div><h2>Created: {this.state.created_at}</h2></div>
+
+        </div>
+
+
+      </div>
+    );
+  }
+}
+export default Dashboard;
+
+
+
+
+{/* {this.state.copyListOfCoins.map((project, key) => {
               return (
                 //We take the key from database that is unique..
                   <div key={key} className="col-lg-3 col-md-6 col-sm 12">
@@ -70,14 +93,3 @@ class Dashboard extends Component {
                   </div>
               );
             })} */}
-    
-            <h2>Hi here project</h2>
-    
-                </div>
-    
-    
-          </div>
-        );
-      }
-}
-export default Dashboard;

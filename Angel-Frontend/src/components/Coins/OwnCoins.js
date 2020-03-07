@@ -21,8 +21,7 @@ class OwnCoins extends Component {
 
 
   removeOwnCoin = (id) => {
-      console.log("nada ahora");
-      console.log(id);
+
     axios.post(`${process.env.REACT_APP_API_URL}/owncoins/remove/${id}`, null, {
       withCredentials: true
     });

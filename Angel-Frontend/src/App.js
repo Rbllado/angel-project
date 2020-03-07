@@ -5,13 +5,6 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 
-import index from "./pages/index"
-import CoinsList from "./components/Coins/CoinsList"
-import History from "./components/Coins/History"
-import DetailCoin from "./components/Coins/DetailCoin";
-import Favorites from "./components/Favorites";
-import AddOwnCoins from "./components/Coins/AddOwnCoins";
-import OwnCoins from "./components/Coins/OwnCoins";
 import AddProject from "./components/AddProject"
 import Default from "./pages/Default"
 import Dashboard from "./components/Dashboard"
