@@ -24,10 +24,8 @@ class App extends Component {
       <div className="App">
         <Navbar />
 
-
-        {/* La pagina de incio tiene que ser login */}
+        
         {/* Private route debe tener la pagina de dashbord. */}
-
 
         <Switch>
           
