@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import AddProject from "./components/AddProject"
 import Default from "./pages/Default"
 import Dashboard from "./components/Dashboard"
+import DashboardTemplate from "./components/DashboardTemplate"
 
 import Signup from './pages/Signup';
 import Login from './pages/Login';
@@ -32,6 +33,8 @@ class App extends Component {
           <AnonRoute exact path="/" component={Login} />
           
           <AnonRoute exact path="/signup" component={Signup} />
+          <AnonRoute exact path="/dashboardtemplate" component={DashboardTemplate} />
+
 
           <PrivateRoute exact path="/dashboard" component={Dashboard} />
           <PrivateRoute exact path="/addproject" component={AddProject} />
