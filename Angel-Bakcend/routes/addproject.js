@@ -9,14 +9,14 @@ const User = require("../models/User");
 router.post("/", async (req, res, next) => {
 
   // params to create a project
-   const { name, idProject, description, incidents} = req.body;
+   const { name, idProject, description, incidents, electricista, fontanero, frigoristas, builder, nameRecursoPreventivo1, nameRecursoPreventivo2, addressHospital, phoneHospital} = req.body;
 
   //  userID from the current user
    const userId = req.session.currentUser._id;
 
   await User.findById(userId)
     .then(() => {
-      Project.create({ name, idProject, description, incidents })
+      Project.create({ name, idProject, description, incidents, electricista, fontanero, frigoristas, builder, nameRecursoPreventivo1, nameRecursoPreventivo2, addressHospital, phoneHospital})
         .then(project => {
 
           _id = project._id;
