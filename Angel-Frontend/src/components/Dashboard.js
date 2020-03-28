@@ -24,7 +24,7 @@ class Dashboard extends Component {
 
   getProject = () => {
     axios
-      .get(`${process.env.REACT_APP_API_URL}/listproject`, {
+      .get(`${process.env.REACT_APP_API_URL}listproject`, {
         withCredentials: true
       })
       .then(response => {
