@@ -8,6 +8,8 @@ import CardColumns from 'react-bootstrap/CardColumns'
 import { Player } from 'video-react';
 import "../../node_modules/video-react/dist/video-react.css";
 
+import Contador from "../components/Countdown"
+
 
 
 class Dashboard extends Component {
@@ -77,6 +79,13 @@ class Dashboard extends Component {
 
         <div className="">
 
+
+
+          <div>
+            <Contador 
+              timeTillDate="05 26 2019, 6:00 am"
+              timeFormat="MM DD YYYY, h:mm a" />
+          </div>
 
 
           {/* <div><h2>Name of the project: {this.state.name}</h2></div>
@@ -350,7 +359,11 @@ class Dashboard extends Component {
             src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
           />
 
+          <video src="https://www.youtube.com/watch?v=xmF5k0_kU5A" width="420" height="240" controls poster="vistaprevia.jpg" />
+
+
         </div>
+
 
 
       </div>

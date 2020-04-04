@@ -6,7 +6,6 @@
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix Angel-Frontend && npm run build --prefix Angel-Frontend"
-
   },
   "dependencies": {
     "axios": "^0.19.0",
