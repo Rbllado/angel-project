@@ -31,7 +31,7 @@ class AddProject extends Component {
     console.log("estado :", this.state);
 
     axios
-      .post(`${process.env.REACT_APP_API_URL}addProject`, this.state, { // /
+      .post(`${process.env.REACT_APP_API_URL}/addProject`, this.state, { // /
         withCredentials: true
       })
       .then(answer => {
