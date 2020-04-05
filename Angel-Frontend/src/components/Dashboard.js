@@ -83,7 +83,7 @@ class Dashboard extends Component {
 
           <div>
             <Contador 
-              timeTillDate="05 26 2019, 6:00 am"
+              timeTillDate="03 04 2020, 11:00 am"
               timeFormat="MM DD YYYY, h:mm a" />
           </div>
 

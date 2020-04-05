@@ -17,7 +17,8 @@ class Countdown extends Component {
 			const { timeTillDate, timeFormat } = this.props;
 			const then = moment(timeTillDate, timeFormat);
 			const now = moment();
-			const countdown = moment(then - now);
+			 const countdown = moment(now - then);
+			// const countdown = moment(then - now);
 			const days = countdown.format('D');
 			const hours = countdown.format('HH');
 			const minutes = countdown.format('mm');
